@@ -263,12 +263,6 @@ composer run-script test
 
 ---
 
-## Lisensi
-
-Proyek ini menggunakan lisensi MIT. Lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
-
----
-
 ## Roadmap Fitur
 
 - Dashboard dengan statistik real-time
