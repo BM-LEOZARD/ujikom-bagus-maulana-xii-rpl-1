@@ -5,146 +5,147 @@
 </p>
 
 <p align="center">
+    <a href="#deskripsi-proyek">Deskripsi</a> •
     <a href="#fitur-utama">Fitur</a> •
     <a href="#persyaratan-sistem">Persyaratan</a> •
     <a href="#instalasi">Instalasi</a> •
-    <a href="#penggunaan">Penggunaan</a> •
-    <a href="#struktur-database">Database</a>
+    <a href="#penggunaan">Penggunaan</a>
 </p>
 
 ---
 
-## 📋 Deskripsi Proyek
+## Deskripsi Proyek
 
-**Sistem Manajemen Peminjaman Alat** adalah aplikasi web yang dirancang untuk memudahkan proses manajemen peminjaman dan pengembalian peralatan/alat. Aplikasi ini menggunakan Laravel 13 sebagai framework backend dan Tailwind CSS untuk frontend yang responsif dan modern.
+Sistem Manajemen Peminjaman Alat adalah aplikasi web yang dikembangkan sebagai proyek Ujian Kompetensi Keahlian (Ujikom) di Sekolah Menengah Kejuruan. Aplikasi ini dirancang untuk mengelola proses peminjaman dan pengembalian peralatan/alat secara terstruktur dan efisien. 
 
-Sistem ini cocok digunakan oleh:
-- Sekolah/Universitas untuk manajemen alat laboratorium
-- Kantor/Perusahaan untuk manajemen alat kerja
-- Pusat sewa alat/perangkat
-- Komunitas atau koperasi yang memiliki inventaris bersama
+Aplikasi ini dibangun menggunakan Laravel 13 sebagai framework backend dan Tailwind CSS untuk antarmuka frontend yang responsif dan profesional.
 
----
-
-## ⚡ Fitur Utama
-
-### 1. **Manajemen Kategori Alat**
-   - Membuat dan mengelola kategori alat
-   - Organisasi alat berdasarkan jenis/kategori
-
-### 2. **Manajemen Inventaris Alat**
-   - Tambah, edit, dan hapus data alat
-   - Pantau kondisi alat (baik, rusak, dll)
-   - Tracking status ketersediaan alat
-
-### 3. **Manajemen Peminjaman**
-   - Proses peminjaman alat yang mudah
-   - Atur tanggal peminjaman dan pengembalian
-   - Catat kondisi alat saat peminjaman
-   - Tracking status peminjaman
-
-### 4. **Manajemen Pengembalian**
-   - Edit data pengembalian alat
-   - Verifikasi kondisi alat saat dikembalikan
-   - Proses pengembalian yang terstruktur
-
-### 5. **Laporan & Analisis**
-   - Laporan peminjaman per alat/periode
-   - Export laporan dalam format PDF
-   - Cetak laporan untuk dokumentasi
-
-### 6. **Log Aktivitas**
-   - Mencatat semua aktivitas dalam sistem
-   - Audit trail untuk keamanan dan transparansi
-   - Tracking perubahan data
-
-### 7. **Manajemen Pengguna**
-   - Sistem autentikasi yang aman
-   - Manajemen profil pengguna
-   - Keamanan berbasis role
+Aplikasi ini dapat diimplementasikan pada:
+- Institusi pendidikan (sekolah, universitas) untuk manajemen alat laboratorium
+- Perusahaan untuk manajemen alat kerja
+- Pusat penyewaan peralatan
+- Organisasi yang mengelola inventaris bersama
 
 ---
 
-## 🔧 Persyaratan Sistem
+## Fitur Utama
 
-Sebelum memulai, pastikan Anda memiliki:
+### 1. Manajemen Kategori Alat
+- Membuat dan mengelola kategori alat
+- Organisasi alat berdasarkan jenis dan kategori
 
-- **PHP** ≥ 8.3
-- **Composer** (PHP Package Manager)
-- **Node.js** ≥ 16.0 dan **npm**
-- **Database**: MySQL 8.0+ atau SQLite
-- **Git** (opsional)
+### 2. Manajemen Inventaris Alat
+- Menambah, mengedit, dan menghapus data alat
+- Memantau kondisi alat (baik, rusak)
+- Melacak status ketersediaan alat
+
+### 3. Manajemen Peminjaman
+- Memproses peminjaman alat dengan struktur yang jelas
+- Mengatur tanggal peminjaman dan pengembalian
+- Mencatat kondisi alat saat peminjaman dilakukan
+- Melacak status peminjaman (belum kembali, selesai)
+
+### 4. Manajemen Pengembalian
+- Mengelola data pengembalian alat
+- Memverifikasi kondisi alat saat dikembalikan
+- Memproses pengembalian dengan terstruktur
+
+### 5. Laporan dan Analisis
+- Menghasilkan laporan peminjaman per alat atau periode
+- Mengekspor laporan dalam format PDF
+- Mencetak laporan untuk dokumentasi
+
+### 6. Log Aktivitas
+- Mencatat semua aktivitas dalam sistem
+- Menyediakan audit trail untuk keamanan dan transparansi
+- Melacak perubahan data secara terperinci
+
+### 7. Manajemen Pengguna
+- Sistem otentikasi yang aman
+- Pengelolaan profil pengguna
 
 ---
 
-## 📦 Instalasi
+## Persyaratan Sistem
+
+Sebelum melakukan instalasi, pastikan sistem Anda memenuhi persyaratan berikut:
+
+- PHP versi 8.3 atau lebih tinggi
+- Composer (PHP Package Manager)
+- Node.js versi 16.0 atau lebih tinggi dan npm
+- Database: MySQL 8.0 atau lebih tinggi, atau SQLite
+- Git (opsional)
+
+---
+
+## Instalasi
 
 ### 1. Clone Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/BM-LEOZARD/ujikom-bagus-maulana-xii-rpl-1.git
 cd pengembangan-aplikasi-peminjaman-alat
 ```
 
-### 2. Instalasi Otomatis (Recommended)
+### 2. Instalasi Otomatis (Direkomendasikan)
 ```bash
 composer run-script setup
 ```
 
-Atau lakukan instalasi manual sesuai langkah berikut:
+Atau lakukan instalasi manual dengan mengikuti langkah-langkah berikut:
 
 ### 3. Instalasi Manual
 
-#### Step 1: Install PHP Dependencies
+**Langkah 1: Instalasi Dependensi PHP**
 ```bash
 composer install
 ```
 
-#### Step 2: Setup Environment
+**Langkah 2: Konfigurasi Lingkungan**
 ```bash
-# Copy environment file
+# Salin file environment
 cp .env.example .env
 
-# Generate application key
+# Hasilkan application key
 php artisan key:generate
 ```
 
-#### Step 3: Konfigurasi Database
-Edit file `.env` dan sesuaikan konfigurasi database:
+**Langkah 3: Konfigurasi Database**
+Edit file `.env` dan sesuaikan konfigurasi database Anda:
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=peminjaman_alat
+DB_DATABASE=db_pinjam_alat
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-#### Step 4: Migrasi Database
+**Langkah 4: Migrasi Database**
 ```bash
 php artisan migrate
 ```
 
-#### Step 5: Install Node Dependencies
+**Langkah 5: Instalasi Dependensi Node**
 ```bash
 npm install
 ```
 
-#### Step 6: Build Frontend Assets
+**Langkah 6: Build Frontend Assets**
 ```bash
 npm run build
 ```
 
 ---
 
-## 🚀 Penggunaan
+## Penggunaan
 
-### Development Mode
-Jalankan server development dengan fitur hot reload:
+### Mode Pengembangan
+Jalankan server pengembangan dengan fitur hot reload:
 ```bash
 composer run-script dev
 ```
 
-Atau jalankan secara terpisah:
+Atau jalankan secara terpisah pada terminal yang berbeda:
 ```bash
 # Terminal 1: Artisan Server
 php artisan serve
@@ -152,15 +153,15 @@ php artisan serve
 # Terminal 2: Vite Development Server
 npm run dev
 
-# Terminal 3 (Optional): Queue Listener
+# Terminal 3 (Opsional): Queue Listener
 php artisan queue:listen
 
-# Terminal 4 (Optional): Pail (Log Viewer)
+# Terminal 4 (Opsional): Pail (Log Viewer)
 php artisan pail
 ```
 
-### Production Mode
-Build frontend assets:
+### Mode Produksi
+Build frontend assets dengan perintah:
 ```bash
 npm run build
 ```
@@ -171,113 +172,112 @@ php artisan serve --host=0.0.0.0 --port=8000
 ```
 
 ### Testing
-Jalankan test suite dengan Pest:
+Jalankan test suite menggunakan Pest:
 ```bash
 composer run-script test
 ```
 
 ---
 
-## 🏗️ Struktur Database
+## Struktur Database
 
 ### Tabel-Tabel Utama
 
-#### **users**
+#### Tabel users
 - `id` (Primary Key)
 - `name` (Nama Pengguna)
-- `email` (Email)
-- `password` (Password terenkripsi)
+- `username` (Nama Akun)
+- `email` (Alamat Email)
+- `password` (Password Terenkripsi)
 - `created_at`, `updated_at`
 
-#### **kategori**
+#### Tabel kategori
 - `id` (Primary Key)
-- `nama_kategori` (Nama Kategori)
+- `nama_kategori` (Nama Kategori Alat)
 - `created_at`, `updated_at`
 
-#### **alat**
+#### Tabel alat
 - `id` (Primary Key)
 - `nama_alat` (Nama Alat)
-- `id_kategori` (Foreign Key ke kategori)
+- `id_kategori` (Foreign Key ke Tabel kategori)
 - `deskripsi` (Deskripsi Alat)
-- `kondisi` (Kondisi: baik, rusak, diperbaiki)
+- `kondisi` (Kondisi: baik, rusak)
 - `status` (Status: tersedia, dipinjam)
 - `created_at`, `updated_at`
 
-#### **peminjaman**
+#### Tabel peminjaman
 - `id` (Primary Key)
-- `id_alat` (Foreign Key ke alat)
+- `id_alat` (Foreign Key ke Tabel alat)
 - `nama_peminjam` (Nama Peminjam)
 - `tgl_pinjam` (Tanggal Peminjaman)
 - `tgl_kembali` (Tanggal Pengembalian Direncanakan)
-- `kondisi` (Kondisi Alat Saat Dipinjam)
-- `status` (Status: aktif, selesai, overdue)
+- `kondisi` (Status: baik, rusak)
+- `status` (Status: belum kembali, selesai)
 - `created_at`, `updated_at`
 
-#### **log_aktivitas**
+#### Tabel log_aktivitas
 - `id` (Primary Key)
-- `user_id` (Foreign Key ke users)
-- `aktivitas` (Deskripsi Aktivitas)
+- `user_id` (Foreign Key ke Tabel users)
+- `aksi` (Deskripsi Aktivitas)
+- `Modul` (Aktivitas Antar Tabel)
 - `keterangan` (Detail Aktivitas)
 - `created_at`, `updated_at`
 
 ---
 
-## 🔐 Fitur Keamanan
+## Fitur Keamanan
 
-- ✅ Autentikasi Laravel Breeze
-- ✅ CSRF Protection
-- ✅ SQL Injection Prevention (Eloquent ORM)
-- ✅ Password Hashing (Bcrypt)
-- ✅ Security Headers
-- ✅ Rate Limiting
+- Otentikasi Laravel Breeze
+- Proteksi CSRF (Cross-Site Request Forgery)
+- Pencegahan SQL Injection (Menggunakan Eloquent ORM)
+- Hashing Password (Bcrypt)
+- Security Headers
+- Rate Limiting
 
 ---
 
-## 📝 Catatan Penggunaan
+## Catatan Penggunaan
 
 ### Kondisi Alat
-- `Baik`: Alat dalam kondisi normal
-- `Rusak`: Alat tidak dapat digunakan
-- `Diperbaiki`: Alat sedang dalam perbaikan
+- **Baik**: Alat berada dalam kondisi normal dan dapat digunakan
+- **Rusak**: Alat tidak dapat digunakan dan memerlukan perbaikan
 
 ### Status Alat
-- `Tersedia`: Alat dapat dipinjam
-- `Dipinjam`: Alat sedang dipinjam
-- `Maintenance`: Alat sedang dalam pemeliharaan
+- **Tersedia**: Alat dapat dipinjam oleh pengguna
+- **Dipinjam**: Alat sedang dipinjam dan tidak tersedia
 
 ### Status Peminjaman
-- `Aktif`: Peminjaman sedang berlangsung
-- `Selesai`: Alat telah dikembalikan
-- `Overdue`: Alat belum dikembalikan melewati batas tanggal
+- **Belum Kembali**: Peminjaman sedang berlangsung
+- **Selesai**: Alat telah dikembalikan dengan lengkap
 
 ---
 
-## 🛠️ Stack Teknologi
+## Stack Teknologi
 
 - **Backend**: Laravel 13, PHP 8.3
 - **Frontend**: Tailwind CSS 3, Alpine.js, Blade
-- **Database**: MySQL/SQLite
+- **Database**: MySQL / SQLite
 - **Build Tool**: Vite
 - **Testing**: Pest
 - **Package Manager**: Composer, npm
 
 ---
 
-## 📜 Lisensi
+## Lisensi
 
-Proyek ini menggunakan lisensi **MIT**. Lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
-
----
-
-## 🚦 Roadmap Fitur
-
-- [ ] Dashboard dengan statistik real-time
-- [ ] Notifikasi untuk pengembalian overdue
-- [ ] Export laporan ke format Excel
-- [ ] Mobile app
-- [ ] Multi-user dengan role permissions
-- [ ] Integrasi email notifications
+Proyek ini menggunakan lisensi MIT. Lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
 
 ---
 
-**Terima kasih telah menggunakan Sistem Manajemen Peminjaman Alat!** 🎉
+## Roadmap Fitur
+
+- Dashboard dengan statistik real-time
+- Notifikasi untuk pengembalian yang terlambat
+- Export laporan ke format Excel
+- Integrasi email notifications
+- Peningkatan fitur keamanan dan performa
+- Pengembangan aplikasi mobile
+
+---
+
+Dokumentasi ini disusun sebagai bagian dari Proyek Ujian Kompetensi Keahlian (Ujikom) Sekolah Menengah Kejuruan.
